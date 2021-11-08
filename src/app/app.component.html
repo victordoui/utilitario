@@ -1,28 +1,29 @@
-<h1>
-  Habilitação - Atualiza conteúdo
-</h1>
+<div class="todo">
+  <div class="topo">
+    <h1>
+      Habilitação - Ajuste texto JSON
+    </h1>
+  </div>
 
-<p class="alert alert-info">
-  USO EXCLUSIVO PARA DESENVOLVIMENTO E TESTES
-</p>
+  <div class="subtopo">
+    <h3>
+      Uso exclusivo para desenvolvimento e testes.
+    </h3>
+  </div>
 
-Coloque aqui o texto para atualizar o conteudo:
+  <div class="container">
 
-<br><br>
 
-<div class="container">
+    <div class="esquerda">
 
-  <div>
-
-    <div class="left">
-
-      <textarea
-        id="textoOriginal"
-        placeholder="Insira o texto original"
-        [(ngModel)]="textoOriginal" class="form-control"
+      <textarea class="esquerda"
+                id="textoOriginal"
+                placeholder="Insira o texto original"
+                [(ngModel)]="textoOriginal"
       >
       </textarea>
     </div>
+
 
     <div class="center">
       <button
@@ -34,18 +35,18 @@ Coloque aqui o texto para atualizar o conteudo:
       </button>
     </div>
 
-    <div class="right">
-    <textarea
-      id="textoTratado"
-      placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
-      [(ngModel)]="textoTratado"
-      class="form-control"
-      readonly
+    <div class="direita">
+
+    <textarea class="direita"
+              id="textoTratado"
+              placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
+              [(ngModel)]="textoTratado"
+              readonly
+
     >
     </textarea>
 
     </div>
+
   </div>
 </div>
-
-

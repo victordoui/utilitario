@@ -39,8 +39,6 @@ BEGIN
     for (const umDosPedacos of pedacos) {
       montandoTexto += `
 DBMS_LOB.WRITEAPPEND(
-
-
   string_result,
   length('${umDosPedacos}'),
   '${umDosPedacos}'
