@@ -1,7 +1,7 @@
-<div class="todo">
+<div class="body">
   <div class="topo">
     <h1>
-      Habilitação - Ajuste texto JSON
+      Habilitação - Montar query JSON
     </h1>
   </div>
 
@@ -12,12 +12,10 @@
   </div>
 
   <div class="container">
-
     <div class="esquerda">
-
       <textarea class="esquerda"
                 id="textoOriginal"
-                placeholder="Insira o texto original"
+                placeholder="Coloque aqui o texto original"
                 [(ngModel)]="textoOriginal"
       >
       </textarea>
@@ -26,10 +24,14 @@
     <div class="center">
       <button
         (click)="tratamentoDoProcesso(textoOriginal)"
-        class="btn btn-success"
         type="button">
+        Montar query
+      </button>
 
-        Formatar Json<i class="fa fa-angle-right"></i>
+      <button
+        (click)="copyInputMessage(resultado)"
+        type="button">
+        Copiar resultado
       </button>
     </div>
 
@@ -38,22 +40,13 @@
     <textarea
       class="direita"
       id="textoTratado"
-      placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
+      placeholder
       [(ngModel)]="textoTratado"
       readonly
       #resultado
-
     >
     </textarea>
 
     </div>
-
-  </div>
-  <div>
-    <button
-      (click)="copyInputMessage(resultado)"
-      type="button">
-      Copiar resultado
-    </button>
   </div>
 </div>

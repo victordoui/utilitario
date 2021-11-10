@@ -59,6 +59,5 @@ commit;`;
     inputElement.select();
     document.execCommand('copy');
 
-
   }
 }
