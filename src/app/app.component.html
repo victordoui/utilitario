@@ -13,7 +13,6 @@
 
   <div class="container">
 
-
     <div class="esquerda">
 
       <textarea class="esquerda"
@@ -23,7 +22,6 @@
       >
       </textarea>
     </div>
-
 
     <div class="center">
       <button
@@ -37,16 +35,25 @@
 
     <div class="direita">
 
-    <textarea class="direita"
-              id="textoTratado"
-              placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
-              [(ngModel)]="textoTratado"
-              readonly
+    <textarea
+      class="direita"
+      id="textoTratado"
+      placeholder="Informe o texto ao lado, aperte o botão e aguarde a magica"
+      [(ngModel)]="textoTratado"
+      readonly
+      #resultado
 
     >
     </textarea>
 
     </div>
 
+  </div>
+  <div>
+    <button
+      (click)="copyInputMessage(resultado)"
+      type="button">
+      Copiar resultado
+    </button>
   </div>
 </div>

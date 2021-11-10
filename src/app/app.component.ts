@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent {
 
   tratamentoDoProcesso(textoOriginal: string) {
 
-    const quantidadeCaracteres = 2;
+    const quantidadeCaracteres = 1999;
     const pedacos = this.quebrarPedacos(textoOriginal, quantidadeCaracteres);
     this.textoTratado = this.tratarPedacos(pedacos);
   }
@@ -53,5 +53,12 @@ where ID_BLCO_INFO_CNTEUD = xxx;
 commit;`;
 
     return montandoTexto;
+  }
+
+  copyInputMessage(inputElement: HTMLTextAreaElement) {
+    inputElement.select();
+    document.execCommand('copy');
+
+
   }
 }
